@@ -1,5 +1,20 @@
 .App {
-  text-align: center;
+  width: 100%;
+  position: relative;
+}
+
+.App::before {
+  background-image: url("https://images.unsplash.com/photo-1580894732444-8ecded7900cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+  background-position: right;
+  background-repeat: no-repeat;
+  content: "";
+  filter: blur(1px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
 }
 
 .App-logo {
