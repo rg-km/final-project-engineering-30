@@ -6,16 +6,20 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Register from './pages/Register';
 import { ChakraProvider } from '@chakra-ui/react';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <ChakraProvider>
       <BrowserRouter>
+        <Header />
         <Routes>
           <Route path='/' element={<App />} />
           <Route path='/register' element={<Register />}/>
         </Routes>
+        <Footer />
       </BrowserRouter>
     </ChakraProvider>
   </React.StrictMode>
