@@ -1,0 +1,43 @@
+.training {
+    width: 100%;
+    margin-top: 3rem;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  
+  .room-2 {
+    width: 600px;
+    object-fit: cover;
+    height: 450px;
+    margin-top: 25px;
+  }
+  
+  .roki {
+    margin: 2px;
+  }
+  
+  .roki h1 {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .roki p {
+    margin-bottom: 20px;
+  }
+  
+  .btn {
+    width: 100%;
+  }
+  
+  @media screen and (max-width: 1140px) {
+    .training {
+      grid-template-columns: 1fr;
+    }
+  
+    .training .img {
+      max-width: 80%;
+    }
+  }
