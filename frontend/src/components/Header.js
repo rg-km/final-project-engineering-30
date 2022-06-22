@@ -20,26 +20,25 @@ export default function Header() {
     }, [])
 
     return (
-      <Box 
-        as="header" 
-        display={'flex'} 
-        boxShadow={boxShadow}
-        justifyContent='space-between'
-        alignItems={'center'}
-        p={'.875em 2em'}
-        bgColor={navColor}
-        position='fixed'
-        w={'100%'}
-        h={navSize}
-        transition='all .5s'
-        top={0}
-        zIndex='10'
-    >
-        <Heading fontSize={'1.5em'}>Logo image</Heading>
-        <Box>
-            <Button as={Link} to="/login" bg={'transparent'}>Login</Button>
-            <Button as={Link} to="/register" bg={'transparent'}>Register</Button>
+        <Box
+            as="header"
+            display={'flex'}
+            boxShadow={boxShadow}
+            justifyContent='space-between'
+            alignItems={'center'}
+            p={'.875em 2em'}
+            bgColor={navColor}
+            position='fixed'
+            w={'100%'}
+            h={navSize}
+            transition='all .5s'
+            top={0}
+            zIndex='10'
+        >
+            <Heading as={Link} to="/" fontSize={'1.5em'}>Logo image</Heading>
+            <Box>
+                <Button as={Link} to="/login" bg={'transparent'}>Login</Button>
+            </Box>
         </Box>
-      </Box>
     )
 }
