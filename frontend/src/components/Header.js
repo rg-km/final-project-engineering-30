@@ -38,6 +38,7 @@ export default function Header() {
         <Heading fontSize={'1.5em'}>Logo image</Heading>
         <Box>
             <Button as={Link} to="/login" bg={'transparent'}>Login</Button>
+            <Button as={Link} to="/register" bg={'transparent'}>Register</Button>
         </Box>
       </Box>
     )
