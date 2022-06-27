@@ -23,13 +23,15 @@ root.render(
         <Routes>
           <Route path='/' element={<App />}>
             <Route index element={<Home />} />
+            <Route path='/navbar' element={<Navbar />} />
+            <Route path='/dashboard' element={<Dashboard />} />
+            <Route path='/room' element={<Room />} />
+            <Route path='/reservation' element={<Reservation />} />
+
+
             <Route path='/login' element={<Login />} />
             <Route path='/register' element={<Register />} />
           </Route>
-          <Route path='/navbar' element={<Navbar />} />
-          <Route path='/dashboard' element={<Dashboard />} />
-          <Route path='/room' element={<Room />} />
-          <Route path='/reservation' element={<Reservation />} />
         </Routes>
       </BrowserRouter>
     </ChakraProvider>

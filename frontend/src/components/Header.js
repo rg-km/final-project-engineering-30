@@ -1,11 +1,13 @@
 import { Box, Heading, Button } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { useAuthContext } from "../lib/auth";
 
 export default function Header() {
     const [navSize, setNavSize] = useState('10em')
     const [navColor, setNavColor] = useState('transparent')
     const [boxShadow, setBoxShadow] = useState('')
+    const { isAuthenticated, userHasAuthenticated } = useAuthContext()
     const listenScrollEvent = () => {
         window.scrollY > 10 ? setNavColor('white') : setNavColor('transparent')
         window.scrollY > 10 ? setNavSize('70px') : setNavSize('10em')
@@ -18,6 +20,10 @@ export default function Header() {
             window.removeEventListener('scroll', listenScrollEvent)
         }
     }, [])
+
+    const logout = () => {
+        userHasAuthenticated(false)
+    }
 
     return (
         <Box
@@ -35,10 +41,16 @@ export default function Header() {
             top={0}
             zIndex='10'
         >
-            <Heading as={Link} to="/" fontSize={'1.5em'}>Logo image</Heading>
-            <Box>
-                <Button as={Link} to="/login" bg={'transparent'}>Login</Button>
-            </Box>
+            <Heading as={Link} to="/" fontSize={'1.5em'}>Ruang Belajar</Heading>
+            {isAuthenticated ? (
+                <Box>
+                    <Button onClick={logout} bg={'transparent'}>Logout</Button>
+                </Box>
+            ) : (
+                <Box>
+                    <Button as={Link} to="/login" bg={'transparent'}>Login</Button>
+                </Box>
+            )}
         </Box>
     )
 }
