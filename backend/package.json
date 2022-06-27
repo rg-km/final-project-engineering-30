@@ -1,0 +1,29 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Back End for Ruang Belajar",
+  "main": "app.js",
+  "scripts": {
+    "start": "node -r dotenv/config bin/www",
+    "develop": "nodemon -r dotenv/config bin/www"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rg-km/final-project-engineering-30.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rg-km/final-project-engineering-30/issues"
+  },
+  "homepage": "https://github.com/rg-km/final-project-engineering-30#readme",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.18"
+  }
+}
