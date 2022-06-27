@@ -12,7 +12,7 @@ function Home() {
                 <Box p={4} maxW="448px">
                     <Heading>Title</Heading>
                     <Text fontWeight={700} fontFamily={'mono'}>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fames ipsum pulvinar dictumst adipiscing et, augue phasellus id sapien.
+                        Platform untuk memagement penyewaan ruang belajar bagi pelajar.
                     </Text>
                 </Box>
             </Container>
